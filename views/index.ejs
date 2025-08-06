@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>QuickNotes 📝</title>
+  <link rel="stylesheet" href="/stylesheets/shared/style.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+  <link rel="stylesheet" href="/stylesheets/index.css">
+</head>
+<body>
+
+  <div class="heading">
+    <h1>QuickNotes 📝</h1>
+  </div>
+
+  <div class="main">
+    <div class="form">
+      <form action="/create" method="post">
+        <input class="title" placeholder="Enter the title here..." name="title">
+        <textarea  class="details" placeholder="Enter the details here..." name="details"></textarea>
+        <input class="button create-button" type="submit" value="Create Task">
+      </form>
+      
+    </div>
+
+    <div class="tasks">
+      <% if(files.length > 0) { %>
+        <% files.forEach((val) => {  %>
+          <div class="task">
+            <div class="container">
+              <a class="route-css" href="/file/<%= val %>">
+                <h3><%= val %></h3>
+                Read More.</a>
+            </div>
+            <div class="options">
+              <a href="/edit/<%= val %>">
+                <span class="material-symbols-outlined edit-button">
+                  edit
+                </span>
+              </a>
+              <a href="/delete/<%= val %>">
+                <span class="material-symbols-outlined delete-button">
+                  delete
+                </span>
+              </a>
+            </div>
+          </div>
+        <% }) %>
+      <% } else { %>
+        <h3>no tasks yet.</h3>
+      <% } %>
+    </div>
+  </div>
+
+  <script src="/javascripts/script.js"></script>
+</body>
+</html>

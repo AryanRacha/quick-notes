@@ -1,0 +1,97 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-weight: 500;
+  color: white;
+}
+
+html, body {
+  background-color: rgb(30, 30, 30);
+  margin: 10px;
+}
+
+.title, .details {
+  border: none;
+  margin:  10px 0;
+  display: block;
+  padding: 6px;
+  width: 100%;
+  background-color: rgb(85, 85, 85);
+  color: white;
+  border-radius: 6px;
+  box-sizing: border-box;
+}
+
+.title::placeholder, .details::placeholder {
+  color: rgb(200, 200, 200);
+}
+
+.title:focus, .details:focus {
+  outline: none;
+}
+
+.details {
+  height: 100px;
+  resize: none;
+}
+
+.button {
+  padding: 8px 12px;
+  border-radius: 20px;
+  border: none;
+  color: white;
+  cursor: pointer;
+  margin-bottom: 25px;
+}
+
+.edit-button {
+  background-color: rgb(200, 200, 200);
+  border-radius: 20px;
+  padding: 5px;
+  color: rgb(85, 85, 85);
+}
+
+.delete-button {
+  background-color: rgb(255, 80, 80);
+  border-radius: 20px;
+  padding: 5px;
+  color: rgb(85, 85, 85);
+  margin-left: 3px;
+}
+
+.options a {
+  text-decoration: none;
+}
+
+.route-css {
+  text-decoration: none;
+  color: rgb(45, 140, 255);
+  font-size: 12px;
+  margin-bottom: 100px;
+}
+
+.heading {
+  position: absolute;
+  top: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.back-option {
+  display: inline-block;
+}
+
+.back-button {
+  background-color: rgb(200, 200, 200);
+  border-radius: 20px;
+  padding: 5px;
+  background-color: rgb(0, 115, 255);
+  align-items: center;
+  padding-right: 7px;
+}
+
+.form {
+  margin-top: 65px;
+}

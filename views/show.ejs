@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/stylesheets/shared/style.css">
+  <link rel="stylesheet" href="/stylesheets/show.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+  <title>QuickNotes 📝</title>
+</head>
+<body>
+  <div class="show-main">
+    <div class="navbar">
+      <div class="back-option">
+        <a class="route-css" href="/">
+          <span class="material-symbols-outlined back-button">
+            arrow_back_ios_new
+          </span>
+        </a>
+      </div>
+      <div class="heading">
+        <h1>QuickNotes 📝</h1>
+      </div>
+      <div class="options modify-options">
+        <a href="/edit/<%= filename %>">
+          <span class="material-symbols-outlined edit-button">
+            edit
+          </span>
+        </a>
+        <a href="/delete/<%= filename %>">
+          <span class="material-symbols-outlined delete-button">
+            delete
+          </span>
+        </a>
+      </div>
+    </div>
+    <div class="show-content">
+      <h3><%= filename %></h3>
+      <p><%= filedata %></p>
+    </div>
+  </div>
+</body>
+</html>

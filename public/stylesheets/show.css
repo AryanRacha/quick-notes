@@ -1,0 +1,12 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+}
+
+.show-content {
+  margin: 30px 20px;
+}
+
+.show-content p {
+  margin-top: 20px;
+}
